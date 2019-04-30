@@ -1,7 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import { createStore } from 'redux'
+import reducers from './reducers'
+import { Provider } from 'react-redux'
+import Counter from './Counter'
 const store = createStore(reducers)
 
 
@@ -12,7 +15,7 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            <Counter />
           </p>
           <a
             className="App-link"
